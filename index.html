@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='/styles.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="./img//logo.svg" alt="logo">
+        </div>
+
+        <div class="main-box">
+            <div class="left">
+
+
+                <textarea name="" id="textarea" placeholder="Ingresa el texto aqui"></textarea>
+                <div class="alerta">
+                    <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+                    <img src="./img/exclamation.svg" alt="">
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-encriptar" onclick="encryptText()" >Encriptar</button>
+                    <button class="btn btn-desencriptar" onclick="decryptText()" >Desencriptar</button>
+                </div>
+    
+            </div>
+            <div class="right">
+                <div class="box-cifrado">
+
+                    <div class="text-info">
+                        <img src="./img/photo.svg" alt="muneco">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <span>Ingresa el texto que deseas encriptar o desencriptar</span>
+                    </div>  
+
+                    <p class="texto-cifrado"></p>
+
+                    <div class="button-group">
+                        <button type="button" class="btn btn-copy">Copiar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

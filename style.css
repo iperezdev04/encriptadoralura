@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: rgba(10, 56, 113, 1);
+    --secondary-color: rgba(216, 223, 232, 1);
+    --main-font: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--secondary-color);
+}
+
+.container {
+    height: auto;
+}
+
+/*COMPUTER FIRST DESIGN*/
+
+
+.logo {
+    display: inline-block;
+    width: 120px;
+}
+
+.logo img {
+    padding: 24px;
+}
+
+/*----------------------------------------*/
+
+.main-box {
+    /* background-color: red; */
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 2fr auto;
+    margin: 10px 10px;
+}
+
+.left {
+    height: 100vh;
+    /* background-color: rgb(25, 8, 179); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+/*-----------------------------------------*/
+
+.left textarea {
+    width: 99%;
+    height: 100%;
+    font-size: 24px;
+    resize: none;
+
+    border: none;
+
+    background-color: var(--secondary-color);
+}
+
+.left textarea:focus {
+    outline: none;
+}
+
+
+/*-----------------------------------------*/
+
+.alerta {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.alerta p {
+    padding: 0;
+    margin: 0;
+}
+
+.alerta i {
+    color: rgba(103, 128, 142, 1);
+    font-size: 1em;
+}
+
+/*-----------------------------------------*/
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 5px;
+}
+
+.button-group .btn {
+    padding: 24px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+.button-group .btn-encriptar {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.button-group .btn-desencriptar {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.button-group .btn-copy {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    display: none;
+}
+
+/*-----------------------------------------*/
+
+.right {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.box-cifrado img {
+    display: none;
+}
+
+.box-cifrado {
+    /* text-align: center; */
+    background-color: rgb(255, 255, 255);
+    padding: 32px;
+    border-radius: 32px;
+
+    width: 100%;
+
+    height: auto;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+}
+
+.text-info {
+    padding: 32px;
+}
+
+.text-info h2 {
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.text-info span {
+    text-align: center;
+    display: block;
+}
+
+.texto-cifrado {
+    overflow: scroll;
+    height: 200px;
+    display: none;
+}
+
+
+/*---------------------------------------------------------*/
+
+/*RESPONSIVE*/
+
+/*COMPUTADORAS*/
+@media (min-width: 1025px) {
+
+    .container{
+        width: 1000px;
+        margin: 30px auto;
+    }
+    
+    .main-box{
+        grid-template-columns: 2fr 1fr ;
+    }
+
+    .left{
+        justify-content: flex-start;
+    }
+
+    .left textarea{
+        height: 65%;
+    }
+
+
+    .right{
+        position: relative;
+        bottom: 100px;
+    }
+
+    .box-cifrado{
+        min-height: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        width: 330px;
+    }
+
+    .text-info{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+
+        display: block;
+    }
+
+    .box-cifrado .text-info img{
+        display: block;
+        /* width: 336px;
+        height: 304px; */
+
+    }
+
+    .button-group{
+        flex-direction: row;
+    }
+
+    .button-group .btn{
+        width: 50%;
+    }
+
+    .texto-cifrado{
+        display: none;
+        height: 485px;
+        text-align: justify;
+    }
+
+    .button-group .btn-copy{
+        display: none;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .button-group {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    .btn-copy{
+        width: 100%;
+    }
+
+}
